@@ -27,7 +27,7 @@ for (const file of cmdFiles) {
   client.commands.set(command.name, command)
 } //LOADING DONE
 
-
+require('./uptime.js')
 //WHEN SOMEONE MESSAGE
 client.on("message", message => {
    if (message.author.bot) return;
