@@ -12,7 +12,7 @@ let embed = new MessageEmbed()
     if (!song) {
       queue.channel.leave();
       message.client.queue.delete(message.guild.id);
-      embed.setAuthor("MUSIC QUEUE IS ENDED NOW :/")
+      embed.setAuthor("Nenhuma música tocando agora :/")
       return queue.textChannel
         .send(embed)
         .catch(console.error);
@@ -52,7 +52,7 @@ let embed = new MessageEmbed()
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
 embed.setTitle(`<a:musica:754082353894260746> Música tocando agora!`) 
     .setDescription(`**[${song.title}](${song.url})**`)
-   .setThumbnail 
+   .setThumbnail(song.thumbnail)
     
     queue.textChannel
       .send(embed)

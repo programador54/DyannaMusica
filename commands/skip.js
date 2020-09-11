@@ -47,7 +47,7 @@ const vote = message.client.vote.get(message.guild.id)
        
        if(vcvote === 2) {
           serverQueue.connection.dispatcher.end();
-    embed.setDescription("✔ | Skipping The Song")
+    embed.setDescription("⏩ | pulado para a próxima música.")
     embed.setThumbnail(client.user.displayAvatarURL())
     return message.channel.send(embed);
        }
