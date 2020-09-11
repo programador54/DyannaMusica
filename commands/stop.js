@@ -25,7 +25,7 @@ let embed = new MessageEmbed()
     const serverQueue = message.client.queue.get(message.guild.id);
 
     if (!serverQueue) {
-      embed.setAuthor("There is nothing playing that i could stop")
+      embed.setAuthor("Não há nada tocando que eu pudesse parar! ")
       return message.channel.send(embed);
     }
 
