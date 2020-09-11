@@ -29,7 +29,7 @@ let embed = new MessageEmbed()
       }
 
       if (error.message.includes === "copyright") {
-        return message.channel.send("THIS VIDEO CONTAINS COPYRIGHT CONTENT");
+        return message.channel.send("Esse vídeo contém COPYRIGHT!");
       } else {
         console.error(error);
       }
@@ -56,6 +56,6 @@ embed.setTitle(`<a:musica:754082353894260746> Música tocando agora!`)
     
     queue.textChannel
       .send(embed)
-      .catch(err => message.channel.send("Habilitar para tocar música"));
+      .catch(err => message.channel.send("É necessário configurar eu, para tocar música"));
   }
 };
