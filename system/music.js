@@ -50,11 +50,11 @@ let embed = new MessageEmbed()
       .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
-embed.setAuthor("Started Playing Song", message.client.user.displayAvatarURL())
+embed.setAuthor("<a:musica:754082353894260746> Música tocando agora!", message.client.user.displayAvatarURL())
     .setDescription(`**[${song.title}](${song.url})**`)
     
     queue.textChannel
       .send(embed)
-      .catch(err => message.channel.send("UNABLE TO PLAY SONG"));
+      .catch(err => message.channel.send("Habilitar para tocar música"));
   }
 };
