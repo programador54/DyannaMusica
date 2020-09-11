@@ -40,7 +40,7 @@ module.exports = {
     const urlcheck = videoPattern.test(args[0]);
 
     if (!videoPattern.test(args[0]) && playlistPattern.test(args[0])) {
-      embed.setAuthor("I am Unable To Play Playlist for now")
+      embed.setAuthor("Eu sou incapaz de reproduzir playlist por enquanto")
       return message.channel.send(embed);
     }
 
@@ -75,9 +75,9 @@ module.exports = {
           thumbnail: songData.videoDetails.thumbnail.thumbnails[3].url
         };
       } catch (error) {
-        if (message.include === "copyright") {
+        if (message.include === "Encontrado Copyright") {
           return message
-            .reply("THERE IS COPYRIGHT CONTENT IN VIDEO -_-")
+            .reply("HÁ CONTEÚDO DE DIREITOS AUTORAIS  NESSE VÍDEO -_-")
             .catch(console.error);
         } else {
           console.error(error);
@@ -97,8 +97,8 @@ module.exports = {
         };
       } catch (error) {
         console.log(error)
-        if(error.errors[0].domain === "usageLimits") {
-          return message.channel.send("Your YT API limit is over and it will be restored under 24 hours")
+        if(error.errors[0].domain === "Limite Alcançado") {
+          return message.channel.send("Seu limite de API YT acabou e será restaurado em menos de 24 horas")
         }
       }
     }
@@ -110,10 +110,10 @@ module.exports = {
       
     
       serverQueue.songs.push(song);
-      embed.setAuthor("Added New Song To Queue", client.user.displayAvatarURL())
+      embed.setAuthor("Adicionado a lista", client.user.displayAvatarURL())
       embed.setDescription(`**[${song.title}](${song.url})**`)
       embed.setThumbnail(song.thumbnail)
-      .setFooter("Likesa - " + songData.videoDetails.likes + ", Dislikes - " +  songData.videoDetails.dislikes)
+      .setFooter("Likes - " + songData.videoDetails.likes + ", Deslikes - " +  songData.videoDetails.dislikes)
       
       return serverQueue.textChannel
         .send(embed)
@@ -136,7 +136,7 @@ module.exports = {
         return message.channel
           .send({
             embed: {
-              description: `😭 | Could not join the channel: ${error}`,
+              description: `😭 | Não foi possível entrar no canal: ${error}`,
               color: "#ff2050"
             }
           })
