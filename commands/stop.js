@@ -18,7 +18,7 @@ let embed = new MessageEmbed()
       
     if (!channel) {
       //IF AUTHOR IS NOT IN VOICE CHANNEL
-      embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL :/")
+      embed.setAuthor("Nenhuma música está tocando agora :/")
       return message.channel.send(embed);
     }
 

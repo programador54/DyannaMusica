@@ -11,7 +11,7 @@ const youtube = new YoutubeAPI(YOUTUBE_API_KEY);
 const { play } = require("../system/music.js");
 module.exports = {
   name: "play",
-  description: "Tocando agora ",
+  description: "Tocando Músicas ",
   async execute(client, message, args) {
     let embed = new MessageEmbed()
 .setColor(COLOR);
@@ -20,7 +20,7 @@ module.exports = {
     //FIRST OF ALL WE WILL ADD ERROR MESSAGE AND PERMISSION MESSSAGE
     if (!args.length) {
       //IF AUTHOR DIDENT GIVE URL OR NAME
-      embed.setAuthor("WRONG SYNTAX : Type `play <URL> or text`")
+      embed.setAuthor("Uso correto: d-play link/nome da música")
       return message.channel.send(embed);
     }
 
