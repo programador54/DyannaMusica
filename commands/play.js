@@ -11,7 +11,7 @@ const youtube = new YoutubeAPI(YOUTUBE_API_KEY);
 const { play } = require("../system/music.js");
 module.exports = {
   name: "play",
-  description: "Play the song and feel the music",
+  description: "Tocando agora ",
   async execute(client, message, args) {
     let embed = new MessageEmbed()
 .setColor(COLOR);
@@ -28,7 +28,7 @@ module.exports = {
         
     if (!channel) {
       //IF AUTHOR IS NOT IN VOICE CHANNEL
-      embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL :/")
+      embed.setAuthor("Você não está em nenhum canal de voz :/")
       return message.channel.send(embed);
     }
 
