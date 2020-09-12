@@ -11,15 +11,16 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "sqlite3": "^5.0.0",
-    "ms": "^2.1.2", 
+    "discord.js": "^12.2.0",
     "fs": "^0.0.2",
-    "path": "^0.12.7", 
-    "ytdl-core": "^3.2.2", 
-    "ytdl-core-discord": "^1.2.0",
-    "yt-search": "^2.3.0", 
-    "discord.js": "^12.3.1"
-   
+    "path": "^0.12.7",
+    "simple-youtube-api": "^5.2.1",
+    "ytdl-core": "^3.2.2",
+    "ytdl-core-discord": "https://github.com/CTK-WARRIOR/ytdl-core-discord",
+    "@discordjs/opus": "^0.3.2",
+    "genius-lyrics": "^3.0.0",
+    "moment": "^2.27.0",
+    "ms": "^2.1.2"
   },
   "engines": {
     "node": "12.x"
